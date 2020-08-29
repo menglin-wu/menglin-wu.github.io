@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="bootstrap_noprint.min.css" rel="stylesheet">
+    <link href="font-awesome.min.css" rel="stylesheet">
+    <link href="Theme.css" rel="stylesheet">
+    
+    <script src="jquery.min.js"></script>
+    <link href="github-gist.css" rel="stylesheet">
+    <script src="highlight.pack.js"></script>
+    <script src="preview.js"></script>
+</head>
+<body>
+<div id="MainContent">
+    <!-- Markdown Monster Content -->
+    <title>RGBD Temporal Resampling for Real-Time Occlusion Removal</title>
+<h1 id="rgbd-temporal-resampling-for-real-time-occlusion-removal">RGBD Temporal Resampling for Real-Time Occlusion Removal</h1>
+<h3 id="m-wu-and-v-popescu">M. Wu and V. Popescu</h3>
+<p>[ <a href="papers/RGBD_I3D19.pdf">paper</a> | <a href="videos/RGBD_I3D19.mp4">video</a> | <a href="slides/I3D2019_slides.pptx">slides</a> ]</p>
+<img src="rgbd_teaser.jpg">
+<p><em>Pairs of frames that illustrate our occlusion removal method: the original frame is shown to the left, and the frame output by our method is shown to the right. Our method runs at an interactive frame rate of 30 frames per second.</em></p>
+<h5 id="abstract">Abstract</h5>
+<p>Occlusions disrupt the visualization of an object of interest, or target, in a real world scene. Video inpainting removes occlusions from a video stream by cutting out occluders and filling in with a plausible visualization of the object, but the approach is too slow for real-time performance.</p>
+<p>In this paper, we present a method for real-time occlusion removal in the visualization of a real world scene that is captured with an RGBD stream. Our pipeline segments the current RGBD frame to find the target and the occluders, searches for the best matching disoccluded view of the target in an earlier frame, computes a mapping between the target in the current frame and the target in the best matching frame, inpaints the missing pixels of the target in the current frame by resampling from the earlier frame, and visualizes the disoccluded target in the current frame. We demonstrate our method in the case of a walking human occluded by stationary or walking humans. Our method does not rely on a known 2D or 3D model of the target or of the occluders, and therefore it generalizes to other shapes. Our method runs at an interactive frame rate of 30fps.</p>
+<img src="rgbd_fig.jpg" style="height: 480px">
+<p><em>Top: depth channel of reference frame (left) and of current frame (middle), and output of 2D segmentation (right). Bottom: top view image of foreground objects used for 3D segmentation (left), and visualization from a translated viewpoint of bounding cylinders (middle) and of billboards (right).</em></p>
+<h5 id="publication">Publication</h5>
+<p>Meng-Lin Wu and Voicu Popescu. 2019. RGBD temporal resampling for real-time occlusion removal. In Proceedings of the ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games (I3D '19), Stephen N. Spencer (Ed.). ACM, New York, NY, USA, Article 7, 9 pages. DOI: <a href="https://doi.org/10.1145/3306131.3317025">https://doi.org/10.1145/3306131.3317025</a></p>
+
+    <!-- End Markdown Monster Content -->
+</div>
+</body>
+</html>
